@@ -1,15 +1,15 @@
 package tiendajava;
 
-public class supervisor {
-    String nombre;
-    String idEmpleado;
+import tiendajava.Diagramacasouso.Trabajador;
+
+public class supervisor extends Trabajador {
 
     public supervisor() {
+        super();
     }
 
     public supervisor(String nombre, String idEmpleado) {
-        this.nombre = nombre;
-        this.idEmpleado = idEmpleado;
+        super(nombre, idEmpleado);
     }
 
     public void consultarGanancias(Caja caja) {
