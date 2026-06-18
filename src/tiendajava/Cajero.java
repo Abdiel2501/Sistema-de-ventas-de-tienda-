@@ -1,13 +1,14 @@
 package tiendajava;
 
-import tiendajava.Diagramacasouso.Trabajador;
-
-public class Cajero extends Trabajador {
+public class Cajero {
+    String nombre;
+    String idEmpleado;
     private Caja      caja;
     private Inventario inventario;
 
     public Cajero(String nombre, String idEmpleado, Caja caja, Inventario inventario) {
-        super(nombre, idEmpleado);
+        this.nombre      = nombre;
+        this.idEmpleado  = idEmpleado;
         this.caja        = caja;
         this.inventario  = inventario;
     }
