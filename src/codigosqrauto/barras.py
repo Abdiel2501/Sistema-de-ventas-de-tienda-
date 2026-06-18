@@ -67,6 +67,36 @@ PRODUCTOS = [
     {"nombre": "Batería Portátil 737", "marca": "Anker", "precio": 2999.00, "stock": 100, "gramos": 630, "memoria": "24000mAh", "altura": 15.6, "proveedor": "Anker MX"}
 ]
 
+# Intentar cargar los productos desde el archivo codigos.txt si ya existe
+directorio_script = os.path.dirname(os.path.abspath(__file__))
+ruta_txt_default = os.path.join(directorio_script, "codigos_barra", "codigos.txt")
+if os.path.exists(ruta_txt_default):
+    productos_cargados = []
+    try:
+        with open(ruta_txt_default, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                parts = line.split(",")
+                if len(parts) >= 9:
+                    productos_cargados.append({
+                        "codigo": parts[0],
+                        "nombre": parts[1],
+                        "marca": parts[2],
+                        "precio": float(parts[3]),
+                        "stock": int(parts[4]),
+                        "gramos": int(parts[5]),
+                        "memoria": parts[6],
+                        "altura": float(parts[7]),
+                        "proveedor": parts[8]
+                    })
+        if productos_cargados:
+            PRODUCTOS = productos_cargados
+            print(f"Cargados {len(PRODUCTOS)} productos desde {ruta_txt_default}")
+    except Exception as e:
+        print(f"Error al leer codigos.txt: {e}. Se usará la lista predefinida.")
+
 def generar_codigos(carpeta_barras="codigos_barra"):
     # Crear la carpeta de destino si no existe
     if not os.path.exists(carpeta_barras):
@@ -81,8 +111,7 @@ def generar_codigos(carpeta_barras="codigos_barra"):
     with open(ruta_txt_barras, "w", encoding="utf-8") as f_barras:
         for i, prod in enumerate(PRODUCTOS, start=1):
             # Formato EAN-13: pasamos 12 dígitos y la librería calculará el 13º (dígito de control)
-            # Usamos el prefijo 750 (México) seguido de un rango muy lejano (9900000)
-            datos_12 = f"750990000{i:03d}"
+            datos_12 = prod.get('codigo', f"750990000{i:03d}")[:12]
             
             # --- Generar Código de Barras ---
             codigo_b = ean(datos_12, writer=ImageWriter())
