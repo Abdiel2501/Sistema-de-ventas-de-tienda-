@@ -19,6 +19,9 @@ class Producto {
 
     }
 
+    public Producto() {
+    }
+
     public void mostrarInformacion() {
         System.out.println("Codigo de Barras -> " + codigoBarras);
         System.out.println("Nombre           -> " + nombre);
@@ -40,6 +43,17 @@ class Producto {
             }
             return;
         } else {
+            System.out.println("EL STOCK DE " + nombre + " SE ENCUENTRA EN 0.");
+        }
+    }
+
+    public void disminuirStock(int cantidadADisminuir) {
+        if (cantidad > 0 && cantidadADisminuir > 0) {
+            cantidad = cantidad - cantidadADisminuir;
+            if (cantidad <= 5) {
+                System.out.println("SOLO QUEDAN " + cantidad + " PRODUCTOS LLAMADOS: " + nombre);
+            }
+        } else if (cantidad <= 0) {
             System.out.println("EL STOCK DE " + nombre + " SE ENCUENTRA EN 0.");
         }
     }
