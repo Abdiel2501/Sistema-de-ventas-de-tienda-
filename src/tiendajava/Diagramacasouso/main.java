@@ -2,20 +2,20 @@ package Tienda;
 
 import java.util.Scanner;
 
-public class main { // Se recomienda Main con Mayúscula
+public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int eleccion = 0;
         boolean iniciada = false;
 
         do {
-            System.out.println("\n=== INICIAR SESIÓN ===");
+            System.out.println("\ninniciar la sesion");
             System.out.print("Ingresa el id: ");
             int id = sc.nextInt();
 
             sc.nextLine();
             System.out.print("Ingresa tu contraseña: ");
-            String contraseña = sc.nextLine(); // Ahora sí leerá el texto real
+            String contraseña = sc.nextLine();
 
             if (id == 1 && contraseña.equals("pedro")) {
                 eleccion = 1;
@@ -27,12 +27,12 @@ public class main { // Se recomienda Main con Mayúscula
                 eleccion = 3;
                 iniciada = true;
             } else {
-                System.out.println("Id o contraseña incorrectos. Intenta de nuevo.");
+                System.out.println("Id o contraseña incorrectos");
             }
 
         } while (!iniciada);
 
-        System.out.println("\nSesión iniciada con éxito. Bienvenido usuario número: " + eleccion);
+        System.out.println("\nSesión iniciada con éxit,bienenvenido usuario número: " + eleccion);
         switch (eleccion) {
             case 1:
 
