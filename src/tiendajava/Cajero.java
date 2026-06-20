@@ -1,14 +1,11 @@
 package tiendajava;
 
-public class Cajero {
-    String nombre;
-    String idEmpleado;
+public class Cajero extends Trabajador {
     private Caja      caja;
     private Inventario inventario;
 
     public Cajero(String nombre, String idEmpleado, Caja caja, Inventario inventario) {
-        this.nombre      = nombre;
-        this.idEmpleado  = idEmpleado;
+        super(nombre, idEmpleado);
         this.caja        = caja;
         this.inventario  = inventario;
     }

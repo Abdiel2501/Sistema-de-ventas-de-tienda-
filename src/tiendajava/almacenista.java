@@ -1,8 +1,13 @@
 package tiendajava;
 
-public class almacenista {
-    String nombre;
-    String idEmpleado;
+public class almacenista extends Trabajador {
+    public almacenista() {
+        super("Pancho", "2");
+    }
+
+    public almacenista(String nombre, String idEmpleado) {
+        super(nombre, idEmpleado);
+    }
 
     public void registrarProducto(Inventario inventario, String codigo, String nombreProd, String categoria,
             String proveedor, double precio, int cantidad) {

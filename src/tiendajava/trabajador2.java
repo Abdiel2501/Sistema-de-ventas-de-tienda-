@@ -1,4 +1,4 @@
-package tiendajava.Diagramacasouso;
+package tiendajava;
 
 public class trabajador2 extends Trabajador {
     public trabajador2() {

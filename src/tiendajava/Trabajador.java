@@ -1,4 +1,4 @@
-package tiendajava.Diagramacasouso;
+package tiendajava;
 
 public abstract class Trabajador {
     public String nombre;

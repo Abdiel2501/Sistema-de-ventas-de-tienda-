@@ -2,18 +2,14 @@ package tiendajava;
 
 import java.util.Scanner;
 
-public class eugenia {
-    String nombre;
-    String idEmpleado;
+public class eugenia extends Trabajador {
 
     public eugenia() {
-        this.nombre = "Eugenia";
-        this.idEmpleado = "3";
+        super("Eugenia", "3");
     }
 
     public eugenia(String nombre, String idEmpleado) {
-        this.nombre = nombre;
-        this.idEmpleado = idEmpleado;
+        super(nombre, idEmpleado);
     }
 
     public void consultarGanancias(Caja caja) {
