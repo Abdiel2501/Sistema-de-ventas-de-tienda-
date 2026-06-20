@@ -6,6 +6,7 @@ class Producto {
     String categoria;
     String proveedor;
     double precioVenta;
+    double precioCompra;
     int cantidad;
 
     public Producto(String codigoBarras, String nombre, String categoria, String proveedor, double precioVenta,
@@ -15,8 +16,19 @@ class Producto {
         this.categoria = categoria;
         this.proveedor = proveedor;
         this.precioVenta = precioVenta;
+        this.precioCompra = precioVenta - 2.0; // Ganancia por defecto de 2 pesos
         this.cantidad = cantidad;
+    }
 
+    public Producto(String codigoBarras, String nombre, String categoria, String proveedor, double precioVenta,
+            double precioCompra, int cantidad) {
+        this.codigoBarras = codigoBarras;
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.proveedor = proveedor;
+        this.precioVenta = precioVenta;
+        this.precioCompra = precioCompra;
+        this.cantidad = cantidad;
     }
 
     public Producto() {
@@ -27,7 +39,9 @@ class Producto {
         System.out.println("Nombre           -> " + nombre);
         System.out.println("Categoria        -> " + categoria);
         System.out.println("Proveedor        -> " + proveedor);
+        System.out.println("Precio Compra    -> " + precioCompra);
         System.out.println("Precio Venta     -> " + precioVenta);
+        System.out.println("Ganancia Unidad  -> " + (precioVenta - precioCompra));
         System.out.println("Cantidad Almacen -> " + cantidad);
     }
 

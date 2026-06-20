@@ -253,10 +253,11 @@ public class main { // Se recomienda Main con Mayúscula
         }
 
         productoEncontrado.aumentarStock(cantidadEntrada);
-        double ganancia = cantidadEntrada * 2;
-        double gastoProducto = (productoEncontrado.precioVenta * cantidadEntrada) - ganancia;
+        double ganancia = (productoEncontrado.precioVenta - productoEncontrado.precioCompra) * cantidadEntrada;
+        double gastoProducto = productoEncontrado.precioCompra * cantidadEntrada;
 
         System.out.println("El pedido se ha completado con exito.");
         System.out.println("El total a pagar al proveedor sera: " + gastoProducto);
+        System.out.println("La ganancia estimada sera: " + ganancia);
     }
 }

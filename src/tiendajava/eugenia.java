@@ -68,8 +68,8 @@ public class eugenia {
     }
 
     public void registrarNuevoProducto(Inventario inventario, String codigo, String nombreProd, String categoria,
-            String proveedor, double precio, int cantidad) {
-        Producto nuevo = new Producto(codigo, nombreProd, categoria, proveedor, precio, cantidad);
+            String proveedor, double precioVenta, double precioCompra, int cantidad) {
+        Producto nuevo = new Producto(codigo, nombreProd, categoria, proveedor, precioVenta, precioCompra, cantidad);
         inventario.agregarProducto(nuevo);
         System.out.println("Se ha registrado el nuevo producto: " + nombreProd);
     }
@@ -117,12 +117,14 @@ public class eugenia {
                     String categoria = scanner.nextLine();
                     System.out.print("Proveedor: ");
                     String proveedor = scanner.nextLine();
-                    System.out.print("Precio: ");
-                    double precio = scanner.nextDouble();
+                    System.out.print("Precio Compra: ");
+                    double precioCompra = scanner.nextDouble();
+                    System.out.print("Precio Venta: ");
+                    double precioVenta = scanner.nextDouble();
                     System.out.print("Cantidad: ");
                     int cantidad = scanner.nextInt();
                     scanner.nextLine();
-                    registrarNuevoProducto(inventario, codigo, nombre, categoria, proveedor, precio, cantidad);
+                    registrarNuevoProducto(inventario, codigo, nombre, categoria, proveedor, precioVenta, precioCompra, cantidad);
                     break;
                 case 2:
                     consultarBajoStock(inventario);
