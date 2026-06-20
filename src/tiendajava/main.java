@@ -57,10 +57,11 @@ public class main { // Se recomienda Main con Mayúscula
             case 1:
                 do {
                     System.out.println("\nQue tal Pedro. ¿Que haremos hoy?");
-                    System.out.println("1- Escanear producto.");
-                    System.out.println("2- Cobrar venta.");
-                    System.out.println("3- Registrar venta.");
-                    System.out.println("4- Limpiar venta.");
+                    System.out.println("1- Escanear producto (Venta).");
+                    System.out.println("2- Consultar stock individual.");
+                    System.out.println("3- Cobrar venta.");
+                    System.out.println("4- Registrar venta.");
+                    System.out.println("5- Limpiar venta.");
                     System.out.println("Ingresa el numero a eleccion o (67) para salir:");
                     if (sc.hasNextInt()) {
                         eleccion = sc.nextInt();
@@ -81,6 +82,16 @@ public class main { // Se recomienda Main con Mayúscula
                             pedro.escanearProducto(codigoProducto);
                             break;
                         case 2:
+                            System.out.println("Ingresa el codigo de barras del producto a consultar: ");
+                            codigoProducto = sc.nextLine();
+                            Producto prodStock = inventario.buscarProducto(codigoProducto);
+                            if (prodStock != null) {
+                                prodStock.mostrarInformacion();
+                            } else {
+                                System.out.println("Producto no encontrado.");
+                            }
+                            break;
+                        case 3:
                             System.out.println("Ingresa el dinero recibido: ");
                             double dineroRecibido = 0;
                             if (sc.hasNextDouble()) {
@@ -93,10 +104,10 @@ public class main { // Se recomienda Main con Mayúscula
                             }
                             pedro.cobrarVenta(dineroRecibido);
                             break;
-                        case 3:
+                        case 4:
                             pedro.registrarVenta();
                             break;
-                        case 4:
+                        case 5:
                             caja.limpiarVenta();
                             System.out.println("Venta limpia.");
                             break;
