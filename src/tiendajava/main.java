@@ -2,7 +2,7 @@ package tiendajava;
 
 import java.util.Scanner;
 
-public class main { // Se recomienda Main con Mayúscula
+public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int eleccion = 0;
@@ -32,7 +32,7 @@ public class main { // Se recomienda Main con Mayúscula
             }
             
             System.out.print("Ingresa tu contraseña: ");
-            String contraseña = sc.nextLine(); // Ahora sí leerá el texto real
+            String contraseña = sc.nextLine();
 
             if (id == 1 && contraseña.equals("pedro")) {
                 eleccion = 1;

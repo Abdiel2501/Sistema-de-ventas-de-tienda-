@@ -42,7 +42,7 @@ public class Cajero extends Trabajador {
             System.out.println("No hay productos en la venta actual.");
             return;
         }
-        caja.calcularTotal(); // Asegurar que el total esté actualizado
+        caja.calcularTotal();
         if (caja.dineroRecibido < caja.totalVenta) {
             System.out.printf("ERROR: Pago insuficiente. Faltan: $%.2f. Registre el cobro con dinero suficiente.%n", (caja.totalVenta - caja.dineroRecibido));
             return;
