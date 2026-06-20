@@ -102,6 +102,10 @@ public class main { // Se recomienda Main con Mayúscula
                                 System.out.println("Monto inválido.");
                                 break;
                             }
+                            if (dineroRecibido < 0) {
+                                System.out.println("ERROR: El dinero recibido no puede ser negativo.");
+                                break;
+                            }
                             pedro.cobrarVenta(dineroRecibido);
                             break;
                         case 4:
@@ -219,8 +223,12 @@ public class main { // Se recomienda Main con Mayúscula
                                     System.out.println("Cantidad inválida.");
                                     break;
                                 }
+                                if (cantidadRecibida <= 0) {
+                                    System.out.println("Cantidad inválida. Debe ser mayor a 0.");
+                                    break;
+                                }
                                 productoEncontrado.aumentarStock(cantidadRecibida);
-                                System.out.println("Si no es lo que pidio, no lo reciba y llame a su programador.");
+                                System.out.println("Si no es lo que pidio, no lo reciba.");
                             } else {
                                 System.out.println("No se encontro un producto con ese codigo.");
                             }
@@ -249,6 +257,11 @@ public class main { // Se recomienda Main con Mayúscula
         } else {
             sc.nextLine();
             System.out.println("Cantidad inválida.");
+            return;
+        }
+
+        if (cantidadEntrada <= 0) {
+            System.out.println("Cantidad inválida. Debe ser mayor a 0.");
             return;
         }
 

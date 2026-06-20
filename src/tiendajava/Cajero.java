@@ -14,6 +14,16 @@ public class Cajero extends Trabajador {
         System.out.println("\n[Cajero " + nombre + "] Escaneando codigo: " + codigoBarras);
         Producto p = inventario.buscarProducto(codigoBarras);
         if (p != null) {
+            int countInSale = 0;
+            for (Producto prod : caja.getProductosEnVenta()) {
+                if (prod.codigoBarras.equals(p.codigoBarras)) {
+                    countInSale++;
+                }
+            }
+            if (countInSale >= p.cantidad) {
+                System.out.println("ERROR: No hay suficiente stock disponible para agregar este producto. Stock actual: " + p.cantidad);
+                return null;
+            }
             p.mostrarInformacion();
             caja.agregarProductoVenta(p);
         }
@@ -30,6 +40,11 @@ public class Cajero extends Trabajador {
     public void registrarVenta() {
         if (caja.getProductosEnVenta().isEmpty()) {
             System.out.println("No hay productos en la venta actual.");
+            return;
+        }
+        caja.calcularTotal(); // Asegurar que el total esté actualizado
+        if (caja.dineroRecibido < caja.totalVenta) {
+            System.out.printf("ERROR: Pago insuficiente. Faltan: $%.2f. Registre el cobro con dinero suficiente.%n", (caja.totalVenta - caja.dineroRecibido));
             return;
         }
         System.out.println("\n========================================");

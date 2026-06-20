@@ -78,6 +78,40 @@ public class eugenia extends Trabajador {
         System.out.println("Cantidad total de productos en inventario: " + total);
     }
 
+    private double leerDoubleSeguro(Scanner sc, String mensaje) {
+        while (true) {
+            System.out.print(mensaje);
+            String entrada = sc.nextLine();
+            try {
+                double valor = Double.parseDouble(entrada);
+                if (valor < 0) {
+                    System.out.println("ERROR: El valor no puede ser negativo.");
+                    continue;
+                }
+                return valor;
+            } catch (NumberFormatException e) {
+                System.out.println("ERROR: Entrada inválida. Debe ser un número decimal.");
+            }
+        }
+    }
+
+    private int leerIntSeguro(Scanner sc, String mensaje) {
+        while (true) {
+            System.out.print(mensaje);
+            String entrada = sc.nextLine();
+            try {
+                int valor = Integer.parseInt(entrada);
+                if (valor < 0) {
+                    System.out.println("ERROR: El valor no puede ser negativo.");
+                    continue;
+                }
+                return valor;
+            } catch (NumberFormatException e) {
+                System.out.println("ERROR: Entrada inválida. Debe ser un número entero.");
+            }
+        }
+    }
+
     public void iniciarMenu(Inventario inventario, Caja caja, almacenista pancho, Cajero pedro) {
         Scanner scanner = new Scanner(System.in);
         boolean activo = true;
@@ -113,13 +147,9 @@ public class eugenia extends Trabajador {
                     String categoria = scanner.nextLine();
                     System.out.print("Proveedor: ");
                     String proveedor = scanner.nextLine();
-                    System.out.print("Precio Compra: ");
-                    double precioCompra = scanner.nextDouble();
-                    System.out.print("Precio Venta: ");
-                    double precioVenta = scanner.nextDouble();
-                    System.out.print("Cantidad: ");
-                    int cantidad = scanner.nextInt();
-                    scanner.nextLine();
+                    double precioCompra = leerDoubleSeguro(scanner, "Precio Compra: ");
+                    double precioVenta = leerDoubleSeguro(scanner, "Precio Venta: ");
+                    int cantidad = leerIntSeguro(scanner, "Cantidad: ");
                     registrarNuevoProducto(inventario, codigo, nombre, categoria, proveedor, precioVenta, precioCompra, cantidad);
                     break;
                 case 2:
@@ -137,9 +167,7 @@ public class eugenia extends Trabajador {
                 case 6:
                     System.out.print("Codigo del producto: ");
                     String codPerdida = scanner.nextLine();
-                    System.out.print("Cantidad perdida: ");
-                    int cantPerdida = scanner.nextInt();
-                    scanner.nextLine();
+                    int cantPerdida = leerIntSeguro(scanner, "Cantidad perdida: ");
                     reportarPerdidas(inventario, codPerdida, cantPerdida);
                     break;
                 case 7:
