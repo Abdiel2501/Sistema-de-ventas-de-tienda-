@@ -11,6 +11,7 @@ package tiendajava;
 public class CargaInicialInventario {
 
     public static void cargarProductos(Inventario inventario) {
+        inventario.silencioso = true;
         almacenista pancho = new almacenista();
 
         pancho.registrarProducto(inventario, "646441025184", "Arroz 1kg", "Granos y semillas", "Distribuidora La Cosecha S.A. de C.V.", 22.00, 24);
@@ -429,5 +430,6 @@ public class CargaInicialInventario {
         pancho.registrarProducto(inventario, "7503055129236", "Pato gel floral 710ml", "Limpieza Hogar", "Comercializadora de Limpieza y Hogar", 76.00, 76);
         pancho.registrarProducto(inventario, "722429320803", "Bang 926ml", "Limpieza Hogar", "Comercializadora de Limpieza y Hogar", 49.90, 78);
         pancho.registrarProducto(inventario, "7501058758163", "Harpic 35g", "Limpieza Hogar", "Comercializadora de Limpieza y Hogar", 18.50, 35);
+        inventario.silencioso = false;
     }
 }

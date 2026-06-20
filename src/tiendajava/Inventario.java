@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 class Inventario {
     public ArrayList<Producto> listaProductos;
+    public boolean silencioso = false;
 
     public Inventario() {
         this.listaProductos = new ArrayList<>(); // Inicializamos la lista vacía
@@ -11,7 +12,9 @@ class Inventario {
 
     public void agregarProducto(Producto nuevoProducto) {
         this.listaProductos.add(nuevoProducto);
-        System.out.println("Se agregó " + nuevoProducto.nombre + " al inventario.");
+        if (!silencioso) {
+            System.out.println("Se agregó " + nuevoProducto.nombre + " al inventario.");
+        }
     }
 
     public void mostrarInventario() {
