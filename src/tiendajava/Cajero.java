@@ -75,7 +75,7 @@ public class Cajero extends Trabajador {
                 System.out.println("ERROR: No hay suficiente stock disponible para agregar este producto. Stock actual: " + p.cantidad);
                 return null;
             }
-            p.mostrarInformacion();
+            System.out.println("Producto: " + p.nombre + " - Precio: $" + p.precioVenta);
             caja.agregarProductoVenta(p);
         }
         return p;
