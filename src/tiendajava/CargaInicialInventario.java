@@ -1,13 +1,5 @@
 package tiendajava;
 
-/**
- * Clase generada automaticamente para dar de alta el catalogo inicial
- * de productos de la tienda en el Inventario.
- *
- * NOTA: Los campos 'proveedor' y 'cantidad' no venian en la lista original
- * del usuario, por lo que fueron asignados de forma razonable segun la
- * categoria del producto (cantidades de almacen simuladas).
- */
 public class CargaInicialInventario {
 
     public static void cargarProductos(Inventario inventario) {
