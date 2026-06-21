@@ -5,7 +5,7 @@ public class trabajador2 extends Trabajador {
         super();
     }
 
-    public trabajador2(String nombre, String idEmpleado) {
-        super(nombre, idEmpleado);
+    public trabajador2(String nombre, String idEmpleado, String contraseña) {
+        super(nombre, idEmpleado, contraseña);
     }
 }

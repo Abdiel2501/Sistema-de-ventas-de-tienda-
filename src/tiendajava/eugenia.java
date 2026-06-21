@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class eugenia extends Trabajador {
 
     public eugenia() {
-        super("Eugenia", "3");
+        super("Eugenia", "3", "eugenia");
     }
 
-    public eugenia(String nombre, String idEmpleado) {
-        super(nombre, idEmpleado);
+    public eugenia(String nombre, String idEmpleado, String contraseña) {
+        super(nombre, idEmpleado, contraseña);
     }
 
     public void consultarGanancias(Caja caja) {

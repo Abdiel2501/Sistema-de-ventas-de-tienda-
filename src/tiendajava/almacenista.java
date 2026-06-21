@@ -2,11 +2,11 @@ package tiendajava;
 
 public class almacenista extends Trabajador {
     public almacenista() {
-        super("Pancho", "2");
+        super("Pancho", "2", "pancho");
     }
 
-    public almacenista(String nombre, String idEmpleado) {
-        super(nombre, idEmpleado);
+    public almacenista(String nombre, String idEmpleado, String contraseña) {
+        super(nombre, idEmpleado, contraseña);
     }
 
     public void registrarProducto(Inventario inventario, String codigo, String nombreProd, String categoria,

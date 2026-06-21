@@ -4,10 +4,61 @@ public class Cajero extends Trabajador {
     private Caja      caja;
     private Inventario inventario;
 
-    public Cajero(String nombre, String idEmpleado, Caja caja, Inventario inventario) {
-        super(nombre, idEmpleado);
+    public Cajero(String nombre, String idEmpleado, String contraseña, Caja caja, Inventario inventario) {
+        super(nombre, idEmpleado, contraseña);
         this.caja        = caja;
         this.inventario  = inventario;
+    }
+
+    public void realizarVentaCompleta(java.util.Scanner sc) {
+        System.out.println("\n--- INICIANDO FLUJO DE VENTA ---");
+        caja.limpiarVenta();
+        while (true) {
+            System.out.print("Escanea un producto (Ingresa el codigo de barras o escribe 'FIN' para cobrar, 'CANCELAR' para anular): ");
+            String entrada = sc.nextLine().trim();
+            if (entrada.equalsIgnoreCase("FIN")) {
+                break;
+            }
+            if (entrada.equalsIgnoreCase("CANCELAR")) {
+                caja.limpiarVenta();
+                System.out.println("Venta cancelada y limpiada.");
+                return;
+            }
+            if (entrada.isEmpty()) {
+                continue;
+            }
+            escanearProducto(entrada);
+        }
+
+        if (caja.getProductosEnVenta().isEmpty()) {
+            System.out.println("No hay productos en la venta actual.");
+            return;
+        }
+
+        double total = caja.calcularTotal();
+        while (true) {
+            System.out.print("Ingresa el dinero recibido: ");
+            double dineroRecibido = 0;
+            if (sc.hasNextDouble()) {
+                dineroRecibido = sc.nextDouble();
+                sc.nextLine();
+            } else {
+                sc.nextLine();
+                System.out.println("Monto invalido. Debe ser un numero.");
+                continue;
+            }
+            if (dineroRecibido < 0) {
+                System.out.println("ERROR: El dinero recibido no puede ser negativo.");
+                continue;
+            }
+            if (dineroRecibido < total) {
+                System.out.printf("ERROR: Pago insuficiente. Faltan: $%.2f. Intente de nuevo.%n", (total - dineroRecibido));
+                continue;
+            }
+            cobrarVenta(dineroRecibido);
+            registrarVenta();
+            break;
+        }
     }
 
     public Producto escanearProducto(String codigoBarras) {
