@@ -847,6 +847,109 @@ public class CargaInicialInventario {
                 "Comercializadora de Limpieza y Hogar", 49.90, 78);
         pancho.registrarProducto(inventario, "7501058758163", "Harpic 35g", "Limpieza Hogar",
                 "Comercializadora de Limpieza y Hogar", 18.50, 35);
+
+        // --- GALLETAS ---
+        pancho.registrarProducto(inventario, "751000112345", "Galletas Marías Gamesa 170g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 18.50, 30);
+        pancho.registrarProducto(inventario, "751000112352", "Galletas Emperador Chocolate 119g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 21.00, 30);
+        pancho.registrarProducto(inventario, "751000112369", "Galletas Emperador Vainilla 119g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 21.00, 30);
+        pancho.registrarProducto(inventario, "751000112376", "Galletas Emperador Nuez 119g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 21.00, 30);
+        pancho.registrarProducto(inventario, "751000112383", "Galletas Chokis Clásicas 84g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 19.50, 30);
+        pancho.registrarProducto(inventario, "751000112390", "Galletas Chokis Choco Base 84g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 22.00, 30);
+        pancho.registrarProducto(inventario, "751000112406", "Galletas Oreo Original 114g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 20.00, 30);
+        pancho.registrarProducto(inventario, "751000112413", "Galletas Oreo Chocolate 114g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 20.00, 30);
+        pancho.registrarProducto(inventario, "751000112420", "Galletas Canelitas Marinela 120g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 19.00, 30);
+        pancho.registrarProducto(inventario, "751000112437", "Galletas Polvorones Marinela 120g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 19.00, 30);
+        pancho.registrarProducto(inventario, "751000112444", "Galletas Barritas Fresa Marinela 117g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 23.50, 30);
+        pancho.registrarProducto(inventario, "751000112451", "Galletas Barritas Piña Marinela 117g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 23.50, 30);
+        pancho.registrarProducto(inventario, "751000112468", "Galletas Triki Trakes Marinela 86g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 18.00, 30);
+        pancho.registrarProducto(inventario, "751000112475", "Galletas Príncipe Marinela Chocolate 106g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 24.00, 30);
+        pancho.registrarProducto(inventario, "751000112482", "Galletas Príncipe Marinela Blanco 106g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 24.00, 30);
+        pancho.registrarProducto(inventario, "751000112499", "Galletas Surtido Rico Gamesa 436g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 55.00, 30);
+        pancho.registrarProducto(inventario, "751000112505", "Galletas Surtido Fino Gamesa 300g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 68.00, 30);
+        pancho.registrarProducto(inventario, "751000112512", "Galletas Arcoiris Gamesa 75g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 16.50, 30);
+        pancho.registrarProducto(inventario, "751000112529", "Galletas Florentinas Cajeta 83g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 22.50, 30);
+        pancho.registrarProducto(inventario, "751000112536", "Galletas Florentinas Fresa 83g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 22.50, 30);
+        pancho.registrarProducto(inventario, "751000112543", "Galletas Mamut Marinela 30g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 12.00, 30);
+        pancho.registrarProducto(inventario, "751000112550", "Galletas Giro Gamesa 114g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 18.50, 30);
+        pancho.registrarProducto(inventario, "751000112567", "Galletas Ritmo Gamesa 110g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 17.00, 30);
+        pancho.registrarProducto(inventario, "751000112574", "Galletas Habaneras Clásicas 117g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 19.00, 30);
+        pancho.registrarProducto(inventario, "751000112581", "Galletas Habaneras Integral 117g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 20.00, 30);
+        pancho.registrarProducto(inventario, "751000112598", "Galletas Crackets Gamesa 135g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 17.50, 30);
+        pancho.registrarProducto(inventario, "751000112604", "Galletas Ritz Saladas 113g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 21.50, 30);
+        pancho.registrarProducto(inventario, "751000112611", "Galletas Saladitas Gamesa 137g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 18.00, 30);
+        pancho.registrarProducto(inventario, "751000112628", "Galletas Premium Saltines 137g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 20.50, 30);
+        pancho.registrarProducto(inventario, "751000112635", "Galletas Mac'Ma Abanicos 200g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 85.00, 30);
+        pancho.registrarProducto(inventario, "751000112642", "Galletas Mac'Ma Gofres 200g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 92.00, 30);
+        pancho.registrarProducto(inventario, "751000112659", "Galletas Animalitos Gamesa 500g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 38.00, 30);
+        pancho.registrarProducto(inventario, "751000112666", "Galletas Animalitos Dondé 500g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 36.50, 30);
+        pancho.registrarProducto(inventario, "751000112673", "Galletas Globitos Dondé 150g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 22.00, 30);
+        pancho.registrarProducto(inventario, "751000112680", "Galletas Bizcochitos Dondé 150g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 22.00, 30);
+        pancho.registrarProducto(inventario, "751000112697", "Galletas Suavicremas Vainilla 130g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 21.50, 30);
+        pancho.registrarProducto(inventario, "751000112703", "Galletas Suavicremas Fresa 130g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 21.50, 30);
+        pancho.registrarProducto(inventario, "751000112710", "Galletas Suavicremas Chocolate 130g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 21.50, 30);
+        pancho.registrarProducto(inventario, "751000112727", "Galletas Cremax Nieve Gamesa 113g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 19.50, 30);
+        pancho.registrarProducto(inventario, "751000112734", "Galletas Cremax Fresa Gamesa 113g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 19.50, 30);
+        pancho.registrarProducto(inventario, "751000112741", "Galletas Cremax Chocolate Gamesa 113g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 19.50, 30);
+        pancho.registrarProducto(inventario, "751000112758", "Galletas Avena Quaker Frutos Rojos 60g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 15.00, 30);
+        pancho.registrarProducto(inventario, "751000112765", "Galletas Avena Quaker Manzana 60g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 15.00, 30);
+        pancho.registrarProducto(inventario, "751000112772", "Galletas Avena Quaker Miel 60g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 15.00, 30);
+        pancho.registrarProducto(inventario, "751000112789", "Galletas Pastisetas Suandy 300g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 75.00, 30);
+        pancho.registrarProducto(inventario, "751000112796", "Galletas Brío Suandy 200g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 60.00, 30);
+        pancho.registrarProducto(inventario, "751000112802", "Galletas Ricanelas Gamesa 113g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 18.50, 30);
+        pancho.registrarProducto(inventario, "751000112819", "Galletas Deliciosas Gamesa 113g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 18.50, 30);
+        pancho.registrarProducto(inventario, "751000112826", "Galletas Tartinas Fresa Tía Rosa 110g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 22.00, 30);
+        pancho.registrarProducto(inventario, "751000112833", "Galletas Tartinas Zarzamora Tía Rosa 110g", "Galletas",
+                "Dulces y Golosinas Mexicanas S.A.", 22.00, 30);
+
         inventario.silencioso = false;
     }
 }

@@ -8,8 +8,8 @@ public class Caja {
     private ArrayList<Producto> productosEnVenta;
 
     public Caja() {
-        this.totalVenta      = 0.0;
-        this.dineroRecibido  = 0.0;
+        this.totalVenta = 0.0;
+        this.dineroRecibido = 0.0;
         this.productosEnVenta = new ArrayList<>();
     }
 
@@ -36,13 +36,14 @@ public class Caja {
         return cambio;
     }
 
+    // devuelve lista de prodcutos en venta
     public ArrayList<Producto> getProductosEnVenta() {
         return productosEnVenta;
     }
 
     public void limpiarVenta() {
         productosEnVenta.clear();
-        totalVenta     = 0.0;
+        totalVenta = 0.0;
         dineroRecibido = 0.0;
     }
 }
