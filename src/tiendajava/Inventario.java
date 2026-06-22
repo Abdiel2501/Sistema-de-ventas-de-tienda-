@@ -7,7 +7,7 @@ class Inventario {
     public boolean silencioso = false;
 
     public Inventario() {
-        this.listaProductos = new ArrayList<>(); // Inicializamos la lista vacía
+        this.listaProductos = new ArrayList<>(); 
     }
 
     public void agregarProducto(Producto nuevoProducto) {
@@ -20,7 +20,7 @@ class Inventario {
     public void mostrarInventario() {
         System.out.println("\n=== INVENTARIO DE LA TIENDA ===");
         for (Producto prod : listaProductos) {
-            prod.mostrarInformacion(); // Reutilizamos el método que ya hiciste
+            prod.mostrarInformacion(); 
         }
     }
 

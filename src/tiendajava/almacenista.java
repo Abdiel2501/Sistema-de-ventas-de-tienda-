@@ -11,13 +11,7 @@ public class almacenista extends Trabajador {
 
     public void registrarProducto(Inventario inventario, String codigo, String nombreProd, String categoria,
             String proveedor, double precio, int cantidad) {
-        Producto nuevo = new Producto();
-        nuevo.codigoBarras = codigo;
-        nuevo.nombre = nombreProd;
-        nuevo.categoria = categoria;
-        nuevo.proveedor = proveedor;
-        nuevo.precioVenta = precio;
-        nuevo.cantidad = cantidad;
+        Producto nuevo = new Producto(codigo, nombreProd, categoria, proveedor, precio, cantidad);
         inventario.agregarProducto(nuevo);
     }
 

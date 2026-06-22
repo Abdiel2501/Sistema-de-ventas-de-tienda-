@@ -38,34 +38,32 @@ public class main {
                     salirSistema = true;
                     break;
                 }
-                
+
                 System.out.print("Ingresa tu contraseña: ");
                 String contraseña = sc.nextLine();
 
                 String idStr = String.valueOf(id);
                 if (idStr.equals(pedro.getIdEmpleado()) && contraseña.equals(pedro.getContraseña())) {
                     eleccion = 1;
-                    iniciada = true; 
-                } 
-                else if (idStr.equals(pancho.getIdEmpleado()) && contraseña.equals(pancho.getContraseña())) {
-                    eleccion = 2; 
                     iniciada = true;
-                } 
-                else if (idStr.equals(eugeniaObj.getIdEmpleado()) && contraseña.equals(eugeniaObj.getContraseña())) {
+                } else if (idStr.equals(pancho.getIdEmpleado()) && contraseña.equals(pancho.getContraseña())) {
+                    eleccion = 2;
+                    iniciada = true;
+                } else if (idStr.equals(eugeniaObj.getIdEmpleado()) && contraseña.equals(eugeniaObj.getContraseña())) {
                     eleccion = 3;
                     iniciada = true;
-                } 
-                else {
+                } else {
                     System.out.println("Id o contraseña incorrectos. Intenta de nuevo.");
                 }
-                
-            } while (!iniciada); 
+
+            } while (!iniciada);
 
             if (salirSistema) {
                 break;
             }
-            
-            System.out.println("\nSesión iniciada con éxito. Bienvenido/a: " + (eleccion == 1 ? pedro.getNombre() : eleccion == 2 ? pancho.getNombre() : eugeniaObj.getNombre()));
+
+            System.out.println("\nSesión iniciada con éxito. Bienvenido/a: " + (eleccion == 1 ? pedro.getNombre()
+                    : eleccion == 2 ? pancho.getNombre() : eugeniaObj.getNombre()));
             switch (eleccion) {
                 case 1:
                     do {
@@ -112,7 +110,7 @@ public class main {
                 case 2:
                     do {
                         System.out.println("\nQue tal Pancho. ¿Que haremos hoy?");
-                        System.out.println("1- Mostrar productos bajos  .");
+                        System.out.println("1- Mostrar productos bajos en existencia.");
                         System.out.println("2- Solicitar pedido a proveedor.");
                         System.out.println("3- Registrar Reabastecimiento: ");
                         System.out.println("Ingresa el numero a eleccion o (67) para salir de la sesion:");
@@ -145,7 +143,8 @@ public class main {
                                 System.out.println("9- Pastas y Harinas del Centro");
                                 System.out.println("10-PepsiCo México (Sabritas)");
                                 System.out.println("11- Distribuidora de Limpieza del Hogar SA de CV");
-                                System.out.println("Ingresa el numero de el proveedor a hacer reabastecimiento o (67) para salir:");
+                                System.out.println(
+                                        "Ingresa el numero de el proveedor a hacer reabastecimiento o (67) para salir:");
                                 if (sc.hasNextInt()) {
                                     eleccion = sc.nextInt();
                                     sc.nextLine();
@@ -159,19 +158,23 @@ public class main {
                                 }
                                 switch (eleccion) {
                                     case 1:
-                                        hacerPedidoConProveedor(sc, inventario, "Distribuidora La Cosecha S.A. de C.V.");
+                                        hacerPedidoConProveedor(sc, inventario,
+                                                "Distribuidora La Cosecha S.A. de C.V.");
                                         break;
                                     case 2:
-                                        hacerPedidoConProveedor(sc, inventario, "Grupo La Costeña / Conservas del Centro");
+                                        hacerPedidoConProveedor(sc, inventario,
+                                                "Grupo La Costeña / Conservas del Centro");
                                         break;
                                     case 3:
                                         hacerPedidoConProveedor(sc, inventario, "Coca-Cola FEMSA");
                                         break;
                                     case 4:
-                                        hacerPedidoConProveedor(sc, inventario, "Distribuidora de Vinos y Licores del Valle");
+                                        hacerPedidoConProveedor(sc, inventario,
+                                                "Distribuidora de Vinos y Licores del Valle");
                                         break;
                                     case 5:
-                                        hacerPedidoConProveedor(sc, inventario, "Comercializadora Cuidado Personal SA de CV");
+                                        hacerPedidoConProveedor(sc, inventario,
+                                                "Comercializadora Cuidado Personal SA de CV");
                                         break;
                                     case 6:
                                         hacerPedidoConProveedor(sc, inventario, "Dulces y Golosinas Mexicanas S.A.");
@@ -189,7 +192,8 @@ public class main {
                                         hacerPedidoConProveedor(sc, inventario, "PepsiCo México (Sabritas)");
                                         break;
                                     case 11:
-                                        hacerPedidoConProveedor(sc, inventario, "Distribuidora de Limpieza del Hogar SA de CV");
+                                        hacerPedidoConProveedor(sc, inventario,
+                                                "Distribuidora de Limpieza del Hogar SA de CV");
                                         break;
                                     default:
                                         System.out.println("Proveedor invalido.");

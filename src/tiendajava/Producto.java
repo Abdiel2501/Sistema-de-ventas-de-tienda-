@@ -16,7 +16,7 @@ class Producto {
         this.categoria = categoria;
         this.proveedor = proveedor;
         this.precioVenta = precioVenta;
-        this.precioCompra = precioVenta - 2.0; // Ganancia por defecto de 2 pesos
+        this.precioCompra = precioVenta - 2.0; 
         this.cantidad = cantidad;
     }
 
@@ -79,21 +79,6 @@ class Producto {
             System.out.println("NO SE PUEDE AGREGAR ESA CANTIDAD.");
         }
     }
-    /*
-     * Atributos:
-     * 
-     * codigoBarras
-     * nombre
-     * categoria
-     * proveedor
-     * precioVenta
-     * cantidad
-     * 
-     * Métodos:
-     * 
-     * mostrarInformacion()
-     * aumentarStock()
-     * disminuirStock()
-     */
+     
 
 }
